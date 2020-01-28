@@ -1,0 +1,156 @@
+$landing-bg-color: #fafafa;
+
+.body-home {
+  background-color: $landing-bg-color;
+}
+
+.home {
+  $shared-padding: 40px;
+  $logos-padding: $shared-padding;
+  $landing-alternate-bg-color: #fff;
+  $section-padding: $shared-padding / 2;
+  $text-light-color: #777;
+
+  p, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-weight: 300;
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .hero {
+    .logo {
+      max-width: 150px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }  
+
+    .logo-md {
+	max-width: 110px;
+	margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .hero-tagline {
+      font-size: 20px;
+      font-weight: 300;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #757575;
+    }
+
+	.hero-tagline-sub {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #43a047;
+	padding: 15px;
+	}
+
+    .hero-title {
+      margin-top: 0px;
+      font-size: 46px;
+
+    }
+  }
+
+  .cta-buttons {
+    margin-top: $shared-padding;
+
+    .cta-main {
+      margin-left: $shared-padding;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cta-buttons {
+      text-align: center;
+    }
+  }
+
+  blockquote {
+    border-left: none;
+  }
+
+  .features {
+    h3 {
+      // This is needed to align the value statements since some headings span
+      // two rows.
+      height: 2em;
+    }
+  }
+
+  .users {
+    .user-logo-container {
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    blockquote .user-logo-container  {
+      justify-content: left;
+    }
+    .user-logo {
+      width: 150px;
+    }
+    .user-logo.square {
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .users  blockquote .user-logo-container  {
+      justify-content: center;
+    }
+  }
+
+  .landing-section {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .logos {
+    padding-top: $logos-padding;
+    padding-bottom: $logos-padding;
+  }
+
+  .features,
+  .get-started {
+    background-color: $landing-alternate-bg-color;
+  }
+
+  .beta {
+    padding-top: 40px;
+    color: $text-light-color;
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  div.experts:nth-of-type(even)  {
+    background: #fff;
+  }
+
+  .expert {
+      width: 380px;
+      padding-right: 30px;
+      padding-top: 15px;
+  }
+}
