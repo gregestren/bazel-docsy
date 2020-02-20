@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://localhost:12345/versions/2.1.0/bazel-overview.html -->
+<html lang="en" itemscope="" itemtype="https://schema.org/WebPage" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Only show Bazel version in title if it's a release -->
+    <title>Bazel Overview - Bazel 2.1.0</title>
+
+    <link rel="canonical" href="http://localhost:12345/versions/2.1.0/bazel-overview.html">
+
+    <!-- Webfont -->
+    <style class="anchorjs"></style><link href="./Bazel Overview - Bazel 2.1.0_files/css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="http://localhost:12345/images/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link href="./Bazel Overview - Bazel 2.1.0_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Bazel Overview - Bazel 2.1.0_files/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./Bazel Overview - Bazel 2.1.0_files/main.css">
+
+    <!-- metadata -->
+    <meta name="og:title" content="Bazel Overview">
+    <meta name="og:image" content="/images/bazel-og-image.png">
+
+    <!-- google search console verification -->
+    <meta name="google-site-verification" content="ftWLOiP2hnDW4Cw3LUGEaXU83RVIpiyxwaXFFhoakzs">
+  <script type="text/javascript" charset="utf-8" async="" src="./Bazel Overview - Bazel 2.1.0_files/hats-integration-release.js"></script><link rel="preload" href="./Bazel Overview - Bazel 2.1.0_files/f.txt" as="script"><script type="text/javascript" src="./Bazel Overview - Bazel 2.1.0_files/f.txt"></script></head>
+
+  <body>
+        <nav id="common-nav" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.bazel.build/">
+            <img class="navbar-logo" src="./Bazel Overview - Bazel 2.1.0_files/bazel-navbar.svg">
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/bazelbuild/bazel">GitHub</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" action="http://localhost:12345/search.html" id="cse-search-box">
+            <div class="form-group">
+              <input type="hidden" name="cx" value="009927877080525621790:2pxlpaexqpc">
+              <input type="hidden" name="cof" value="FORID:10">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="search" name="q" id="q" class="form-control input-sm" placeholder="Search">
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="http://localhost:12345/">Documentation</a>
+            </li>
+            <li>
+              <a href="https://www.bazel.build/contributing.html">Contribute</a>
+            </li>
+            <li>
+              <a href="https://blog.bazel.build/">Blog</a>
+            </li>
+            <li><a href="https://twitter.com/bazelbuild" class="nav-icon"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://stackoverflow.com/questions/tagged/bazel" class="nav-icon"><i class="fa fa-stack-overflow"></i></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="page-title-bar">
+      <div class="container">
+        <h1 id="documentation">Documentation<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#documentation" aria-label="Anchor link for: documentation" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+      </div>
+    </div>
+
+    <div class="container vpad">
+      <div class="row">
+        <div class="col-md-3">
+          <a class="btn btn-default btn-lg btn-block sidebar-toggle" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#sidebar-nav" aria-expanded="false" aria-controls="sidebar-nav">
+            <i class="glyphicon glyphicon-menu-hamburger"></i> Navigation
+          </a>
+
+          <nav class="sidebar collapse" id="sidebar-nav">
+            <select onchange="location.href=this.value">
+                <option value="" selected="" disabled="" hidden="">Version: 2.1.0</option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/master/bazel-overview.html">
+                    master
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/2.1.0/bazel-overview.html">
+                    2.1.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/2.0.0/bazel-overview.html">
+                    2.0.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/1.2.0/bazel-overview.html">
+                    1.2.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/1.1.0/bazel-overview.html">
+                    1.1.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/1.0.0/bazel-overview.html">
+                    1.0.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.29.1/bazel-overview.html">
+                    0.29.1
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.29.0/bazel-overview.html">
+                    0.29.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.28.0/bazel-overview.html">
+                    0.28.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.27.0/bazel-overview.html">
+                    0.27.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.26.0/bazel-overview.html">
+                    0.26.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.25.0/bazel-overview.html">
+                    0.25.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.24.0/bazel-overview.html">
+                    0.24.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.23.0/bazel-overview.html">
+                    0.23.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.22.0/bazel-overview.html">
+                    0.22.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.21.0/bazel-overview.html">
+                    0.21.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.20.0/bazel-overview.html">
+                    0.20.0
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.19.2/bazel-overview.html">
+                    0.19.2
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.19.1/bazel-overview.html">
+                    0.19.1
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.18.1/bazel-overview.html">
+                    0.18.1
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.17.2/bazel-overview.html">
+                    0.17.2
+                </option>
+                
+                <!-- reconstruct absolute url for the current page for each doc version -->
+                <option value="/versions/0.17.1/bazel-overview.html">
+                    0.17.1
+                </option>
+                
+            </select>
+
+            <h3 id="home">Home<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#home" aria-label="Anchor link for: home" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h3>
+            <ul class="sidebar-nav">
+              <li class="active"><a href="http://localhost:12345/versions/2.1.0/bazel-overview.html">Bazel overview</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/bazel-vision.html">Bazel vision</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/getting-started.html">Getting started</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/backward-compatibility.html">Backward compatibility</a></li>
+            </ul>
+
+            <h3 id="installing-bazel">Installing Bazel<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#installing-bazel" aria-label="Anchor link for: installing bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h3>
+            <ul class="sidebar-nav">
+
+	      <li class="sidebar-nav">
+                <a href="http://localhost:12345/versions/2.1.0/install.html">Installation overview</a>
+	      </li>
+
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#installing-menu" aria-expanded="false" aria-controls="installing-menu">
+                  Installation steps<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="installing-menu">
+
+                   <li><a href="http://localhost:12345/versions/2.1.0/install-ubuntu.html">Ubuntu</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/install-redhat.html">Fedora/CentOS</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/install-os-x.html">macOS</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/install-windows.html">Windows</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/install-compile-source.html">Compiling from source</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/completion.html">Command-line completion</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/ide.html">Integrating with IDEs</a></li>
+                </ul>
+              </li>
+
+              
+              <li class="sidebar-nav">
+                <a href="http://localhost:12345/versions/2.1.0/updating-bazel.html">Updating Bazel</a>
+              </li>
+              
+            </ul>
+
+            <h3 id="using-bazel">Using Bazel<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#using-bazel" aria-label="Anchor link for: using bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h3>
+            <ul class="sidebar-nav">
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#using-menu" aria-expanded="false" aria-controls="using-menu">
+                  Concepts<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="using-menu">
+                  <li><a href="http://localhost:12345/versions/2.1.0/build-ref.html">Core concepts</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/external.html">External dependencies</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/configurable-attributes.html">Configurable attributes</a></li>
+                  <li><a href="http://localhost:12345/versions/master/platforms-intro.html">Platforms and toolchains</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#guides-menu" aria-expanded="false" aria-controls="build-files-menu">
+                  Guides<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="guides-menu">
+                  <li><a href="http://localhost:12345/versions/2.1.0/guide.html">Running Bazel</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/tutorial-creating-a-macro.html">Creating a macro</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/memory-saving-mode.html">Optimizing memory</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/windows.html">Building on Windows</a></li>
+                </ul>
+              </li>
+
+              
+                <li><a href="http://localhost:12345/versions/2.1.0/rules.html">Rules</a></li>
+              
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#query-menu" aria-expanded="false" aria-controls="query-menu">
+                  Queries<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="query-menu">
+                  <li><a href="http://localhost:12345/versions/2.1.0/query-how-to.html">bazel query</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/cquery.html">bazel cquery</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/aquery.html">bazel aquery</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/query.html">Query language</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#best-practices-menu" aria-expanded="false" aria-controls="best-practices-menu">
+                  Best practices<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="best-practices-menu">
+                  <li><a href="http://localhost:12345/versions/2.1.0/best-practices.html">General best practices</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/tutorial-sharing-variables.html">Sharing BUILD variables</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#remote-execution-menu" aria-expanded="false" aria-controls="remote-execution-menu">
+                  Remote execution<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="remote-execution-menu">
+                   <li><a href="http://localhost:12345/versions/2.1.0/remote-execution.html">Remote execution overview</a></li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/remote-execution-rules.html">Guidelines</a></li>
+                   <li>
+                      <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#troubleshoot-remote-execution-menu" aria-expanded="false" aria-controls="troubleshoot-remote-execution-menu">
+                        Troubleshooting<span class="caret"></span>
+                      </a>
+                      <ul class="collapse sidebar-nav sidebar-submenu" id="troubleshoot-remote-execution-menu">
+                         <li><a href="http://localhost:12345/versions/2.1.0/remote-execution-sandbox.html">Troubleshooting with Bazel sandbox</a></li>
+                         <li><a href="http://localhost:12345/versions/2.1.0/workspace-log.html">Non-hermetic WORKSPACE rules</a></li>
+                         <li><a href="http://localhost:12345/versions/2.1.0/remote-execution-caching-debug.html">Debugging remote cache hits</a></li>
+                      </ul>
+                  </li>
+                   <li><a href="http://localhost:12345/versions/2.1.0/remote-execution-ci.html">Remote execution and CI</a></li>
+                 </ul>
+              </li>
+
+              <li>
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#remote-caching-menu" aria-expanded="false" aria-controls="remote-caching-menu">
+                    Remote caching<span class="caret"></span>
+                  </a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="remote-caching-menu">
+                     <li><a href="http://localhost:12345/versions/2.1.0/remote-caching.html">Remote caching overview</a></li>
+                     <li><a href="http://localhost:12345/versions/2.1.0/remote-caching-debug.html">Debugging remote cache hits with local execution</a></li>
+                  </ul>
+              </li>
+              
+             </ul>
+
+           
+
+           <h3 id="reference">Reference<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#reference" aria-label="Anchor link for: reference" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h3>
+           <ul class="sidebar-nav">
+             <li><a href="http://localhost:12345/versions/2.1.0/user-manual.html">Commands and options</a></li>
+
+	     <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#build-files-menu" aria-expanded="false" aria-controls="build-files-menu">
+                  BUILD files<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="build-files-menu">
+		  <li><a href="http://localhost:12345/versions/2.1.0/be/functions.html">Functions</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/be/common-definitions.html">Common definitions</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/be/make-variables.html">"Make" variables</a></li>
+		  <li><a href="http://localhost:12345/versions/2.1.0/skylark/build-style.html">BUILD style guide</a></li>
+                </ul>
+             </li>
+
+
+
+             <li><a href="http://localhost:12345/versions/2.1.0/command-line-reference.html">Command line reference</a></li>
+             <li><a href="http://localhost:12345/versions/2.1.0/test-encyclopedia.html">Writing tests</a></li>
+             <li><a href="http://localhost:12345/versions/2.1.0/build-event-protocol.html">Build Event Protocol</a></li>
+             <li><a href="http://localhost:12345/versions/2.1.0/output_directories.html">Output directory layout</a></li>
+             <li><a href="http://localhost:12345/versions/2.1.0/platforms.html">Platforms</a></li>
+             <li><a href="http://localhost:12345/versions/2.1.0/toolchains.html">Toolchains</a></li>
+           </ul>
+
+            <h3 id="extending-bazel">Extending Bazel<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#extending-bazel" aria-label="Anchor link for: extending bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h3>
+           <ul class="sidebar-nav">
+              <li><a href="http://localhost:12345/versions/2.1.0/skylark/concepts.html">Extension overview</a></li>
+
+              <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#starlark-concepts" aria-expanded="false" aria-controls="starlark-concepts">
+                  Concepts<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="starlark-concepts">
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/macros.html">Macros</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/rules.html">Rules</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/depsets.html">Depsets</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/aspects.html">Aspects</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/repository_rules.html">Repository rules</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/config.html">Configurations</a></li>
+                </ul>
+              </li>
+
+	      <li>
+                <a class="sidebar-nav-heading" data-toggle="collapse" href="http://localhost:12345/versions/2.1.0/bazel-overview.html#starlark-practices" aria-expanded="false" aria-controls="starlark-practices">
+                  Best practices<span class="caret"></span>
+                </a>
+                <ul class="collapse sidebar-nav sidebar-submenu" id="starlark-practices">
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/bzl-style.html">.bzl style guide</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/testing.html">Testing extensions</a></li>
+                  <li><a href="https://skydoc.bazel.build/" target="_blank">Documenting rules</a></li>
+                  <li><a href="https://github.com/bazelbuild/buildtools/tree/master/buildifier">Linter</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/performance.html">Optimizing performance</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/deploying.html">Deploying rules</a></li>
+                  <li><a href="http://localhost:12345/versions/2.1.0/skylark/windows_tips.html">Writing rules on Windows</a></li>
+                </ul>
+              </li>
+ 
+              <li><a href="https://github.com/bazelbuild/examples/tree/master/rules">Examples</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/skylark/faq.html">FAQ</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/skylark/lib/skylark-overview.html">Extensions API</a></li>
+              <li><a href="http://localhost:12345/versions/2.1.0/skylark/language.html">Starlark language</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-md-9">
+          <a id="gh-edit" class="gh-edit default-hidden" href="https://github.com/bazelbuild/bazel/tree/master/site/docs/bazel-overview.md" style="visibility: visible;"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+          <script async="" src="./Bazel Overview - Bazel 2.1.0_files/analytics.js"></script><script>
+            var versionDocsURLRegex = /\/versions\/[\w\.]+\/(.*)/;
+            var ghDocsBazeURL = 'https://github.com/bazelbuild/bazel/tree/master/site/docs/';
+            var editButton = document.getElementById('gh-edit');
+            // if there is an edit button and we are not in the Build Encyclopedia
+            // or other generated files.
+            if (editButton
+                && window.location.pathname.match(versionDocsURLRegex)
+                && window.location.pathname.lastIndexOf('/be/') == -1
+                && window.location.pathname.lastIndexOf('/repo/') == -1
+                && window.location.pathname.lastIndexOf('/skylark/lib/') == -1) {
+              var docFile = window.location.pathname.match(versionDocsURLRegex)[1];
+              // some pages are not using markdown :(
+              if (docFile !== 'user-manual.html'
+                  && docFile !== 'build-ref.html'
+                  && docFile !== 'query.html'
+                  && docFile !== 'test-encyclopedia.html') {
+                docFile = docFile.replace('html', 'md');
+              }
+              editButton.href = ghDocsBazeURL + docFile;
+              editButton.style.visibility = 'visible';
+            }
+          </script>
+
+          <h1 id="what-is-bazel">What is Bazel?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#what-is-bazel" aria-label="Anchor link for: what is bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+
+<p>Bazel is an open-source build and test tool similar to Make, Maven, and Gradle.
+It uses a human-readable, high-level build language. Bazel supports projects in
+multiple languages and builds outputs for multiple platforms. Bazel supports
+large codebases across multiple repositories, and large numbers of users.</p>
+
+<h1 id="why-should-i-use-bazel">Why should I use Bazel?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#why-should-i-use-bazel" aria-label="Anchor link for: why should i use bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+
+<p>Bazel offers the following advantages:</p>
+
+<ul>
+  <li>
+    <p><strong>High-level build language.</strong> Bazel uses an abstract, human-readable
+language to describe the build properties of your project at a high
+semantical level. Unlike other tools, Bazel operates on the <em>concepts</em>
+of libraries, binaries, scripts, and data sets, shielding you from the
+complexity of writing individual calls to tools such as compilers and
+linkers.</p>
+  </li>
+  <li>
+    <p><strong>Bazel is fast and reliable.</strong> Bazel caches all previously done work and
+tracks changes to both file content and build commands. This way, Bazel
+knows when something needs to be rebuilt, and rebuilds only that. To further
+speed up your builds, you can set up your project to build in a  highly
+parallel and incremental fashion.</p>
+  </li>
+  <li>
+    <p><strong>Bazel is multi-platform.</strong> Bazel runs on Linux, macOS, and Windows. Bazel
+can build binaries and deployable packages for multiple platforms, including
+desktop, server, and mobile, from the same project.</p>
+  </li>
+  <li>
+    <p><strong>Bazel scales.</strong> Bazel maintains agility while handling builds with 100k+
+source files. It works with multiple repositories and user bases in the tens
+of thousands.</p>
+  </li>
+  <li>
+    <p><strong>Bazel is extensible.</strong> Many <a href="http://localhost:12345/versions/2.1.0/rules.html">languages</a> are
+supported, and you can extend Bazel to support any other language or
+framework.</p>
+  </li>
+</ul>
+
+<h1 id="how-do-i-use-bazel">How do I use Bazel?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#how-do-i-use-bazel" aria-label="Anchor link for: how do i use bazel" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+
+<p>To build or test a project with Bazel, you typically do the following:</p>
+
+<ol>
+  <li>
+    <p><strong>Set up Bazel.</strong> Download and <a href="http://localhost:12345/versions/2.1.0/install.html">install Bazel</a>.</p>
+  </li>
+  <li>
+    <p><strong>Set up a project <a href="http://localhost:12345/versions/2.1.0/build-ref.html#workspaces">workspace</a></strong>, which is a
+directory where Bazel looks for build inputs and <code class="highlighter-rouge">BUILD</code> files, and where it
+stores build outputs.</p>
+  </li>
+  <li>
+    <p><strong>Write a <code class="highlighter-rouge">BUILD</code> file</strong>, which tells Bazel what to build and how to
+build it.</p>
+
+    <p>You write your <code class="highlighter-rouge">BUILD</code> file by declaring build targets using
+<a href="http://localhost:12345/versions/2.1.0/skylark/language.html">Starlark</a>, a domain-specific language. (See example
+<a href="https://github.com/bazelbuild/bazel/blob/master/examples/cpp/BUILD">here</a>.)</p>
+
+    <p>A build target specifies a set of input artifacts that Bazel will build plus
+their dependencies, the build rule Bazel will use to build it, and options
+that configure the build rule.</p>
+
+    <p>A build rule specifies the build tools Bazel will use, such as compilers and
+linkers, and their configurations. Bazel ships with a number of build rules
+covering the most common artifact types in the supported languages on
+supported platforms.</p>
+  </li>
+  <li>
+    <p><strong>Run Bazel</strong> from the <a href="http://localhost:12345/versions/2.1.0/command-line-reference.html">command line</a>. Bazel
+places your outputs within the workspace.</p>
+  </li>
+</ol>
+
+<p>In addition to building, you can also use Bazel to run
+<a href="http://localhost:12345/versions/2.1.0/test-encyclopedia.html">tests</a> and <a href="http://localhost:12345/versions/2.1.0/query-how-to.html">query</a> the build
+to trace dependencies in your code.</p>
+
+<h1 id="how-does-bazel-work">How does Bazel work?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#how-does-bazel-work" aria-label="Anchor link for: how does bazel work" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+
+<p>When running a build or a test, Bazel does the following:</p>
+
+<ol>
+  <li>
+    <p><strong>Loads</strong> the <code class="highlighter-rouge">BUILD</code> files relevant to the target.</p>
+  </li>
+  <li>
+    <p><strong>Analyzes</strong> the inputs and their
+<a href="http://localhost:12345/versions/2.1.0/build-ref.html#dependencies">dependencies</a>, applies the specified build
+rules, and produces an <a href="http://localhost:12345/versions/2.1.0/skylark/concepts.html#evaluation-model">action</a>
+graph.</p>
+  </li>
+  <li>
+    <p><strong>Executes</strong> the build actions on the inputs until the final build outputs
+are produced.</p>
+  </li>
+</ol>
+
+<p>Since all previous build work is cached, Bazel can identify and reuse cached
+artifacts and only rebuild or retest what’s changed. To further enforce
+correctness, you can set up Bazel to run builds and tests
+<a href="http://localhost:12345/versions/2.1.0/guide.html#sandboxing">hermetically</a> through sandboxing, minimizing skew
+and maximizing <a href="http://localhost:12345/versions/2.1.0/guide.html#correctness">reproducibility</a>.</p>
+
+<h2 id="what-is-the-action-graph">What is the action graph?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#what-is-the-action-graph" aria-label="Anchor link for: what is the action graph" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h2>
+
+<p>The action graph represents the build artifacts, the relationships between them,
+and the build actions that Bazel will perform. Thanks to this graph, Bazel can
+<a href="http://localhost:12345/versions/2.1.0/guide.html#build-consistency-and-incremental-builds">track</a> changes to
+file content as well as changes to actions, such as build or test commands, and
+know what build work has previously been done. The graph also enables you to
+easily <a href="http://localhost:12345/versions/2.1.0/query-how-to.html">trace dependencies</a> in your code.</p>
+
+<h1 id="how-do-i-get-started">How do I get started?<a class="anchorjs-link " href="http://localhost:12345/versions/2.1.0/bazel-overview.html#how-do-i-get-started" aria-label="Anchor link for: how do i get started" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; padding-left: 0.375em;"></a></h1>
+
+<p>To get started with Bazel, see <a href="http://localhost:12345/versions/2.1.0/getting-started.html">Getting Started</a> or jump
+directly to the Bazel tutorials:</p>
+
+<ul>
+  <li><a href="http://localhost:12345/versions/2.1.0/tutorial/cpp.html">Tutorial: Build a C++ Project</a></li>
+  <li><a href="http://localhost:12345/versions/2.1.0/tutorial/java.html">Tutorial: Build a Java Project</a></li>
+  <li><a href="http://localhost:12345/versions/2.1.0/tutorial/android-app.html">Tutorial: Build an Android Application</a></li>
+  <li><a href="http://localhost:12345/versions/2.1.0/tutorial/ios-app.html">Tutorial: Build an iOS Application</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Satisfaction Survey -->
+    <script async="" defer="" src="./Bazel Overview - Bazel 2.1.0_files/f(1).txt"></script>
+
+        <footer class="footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-md-2">
+      <p>About</p>
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/bazelbuild/bazel/wiki/Bazel-Users">Who's Using Bazel?</a></li>
+        <li><a href="https://www.bazel.build/roadmap.html">Roadmap</a></li>
+        <li><a href="https://www.bazel.build/contributing.html">Contribute</a></li>
+        <li><a href="https://www.bazel.build/governance.html">Governance Plan</a></li>
+        <li><a href="https://policies.google.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4 col-md-2">
+      <p>Support</p>
+      <ul class="list-unstyled">
+        <li><a href="http://stackoverflow.com/questions/tagged/bazel">Stack Overflow</a></li>
+        <li><a href="https://github.com/bazelbuild/bazel/issues">Issue Tracker</a></li>
+        <li><a href="http://localhost:12345/">Documentation</a></li>
+        <li><a href="https://www.bazel.build/faq.html">FAQ</a></li>
+        <li><a href="https://www.bazel.build/support.html">Support Policy</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4 col-md-2">
+      <p>Stay Connected</p>
+      <ul class="list-unstyled">
+        <li><a href="https://twitter.com/bazelbuild">Twitter</a></li>
+        <li><a href="https://blog.bazel.build/">Blog</a></li>
+        <li><a href="https://github.com/bazelbuild/bazel">GitHub</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/bazel-discuss">Discussion group</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <p class="text-muted">© 2020 Google</p>
+    </div>
+  </div>
+</div>
+
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./Bazel Overview - Bazel 2.1.0_files/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./Bazel Overview - Bazel 2.1.0_files/bootstrap.min.js"></script>
+
+    <!-- Anchor JS -->
+    <script type="text/javascript" src="./Bazel Overview - Bazel 2.1.0_files/anchor.min.js"></script>
+    <script>
+      // Automatically add anchors and links to all header elements that don't already have them.
+      anchors.add();
+    </script>
+
+    <script>
+      var shiftWindow = function() {
+        if (location.hash.length !== 0) {
+          window.scrollBy(0, -50);
+        }
+      };
+      window.addEventListener("hashchange", shiftWindow);
+
+      var highlightCurrentSidebarNav = function() {
+        var href = location.pathname;
+        var item = $('#sidebar-nav [href$="' + href + '"]');
+        if (item) {
+          var li = item.parent();
+          li.addClass("active");
+
+          if (li.parent() && li.parent().is("ul")) {
+            do {
+              var ul = li.parent();
+              if (ul.hasClass("collapse")) {
+                ul.collapse("show");
+              }
+              li = ul.parent();
+            } while (li && li.is("li"));
+          }
+        }
+      };
+
+      $(document).ready(function() {
+        // Scroll to anchor of location hash, adjusted for fixed navbar.
+        window.setTimeout(function() {
+          shiftWindow();
+        }, 1);
+
+        // Flip the caret when submenu toggles are clicked.
+        $(".sidebar-submenu").on("show.bs.collapse", function() {
+          var toggle = $('[href$="#' + $(this).attr('id') + '"]');
+          if (toggle) {
+            toggle.addClass("dropup");
+          }
+        });
+        $(".sidebar-submenu").on("hide.bs.collapse", function() {
+          var toggle = $('[href$="#' + $(this).attr('id') + '"]');
+          if (toggle) {
+            toggle.removeClass("dropup");
+          }
+        });
+
+        // Highlight the current page on the sidebar nav.
+        highlightCurrentSidebarNav();
+      });
+    </script>
+
+    <!-- Google Analytics tracking code -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61082125-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  
+
+
+</body></html>
